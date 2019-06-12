@@ -16,7 +16,7 @@ def logText(filename, text):
 		f.write(text + "\n")
 
 def printNotice(notice):
-    ''' Print notice message in yellow '''
+    """Print notice message in yellow """
 
     print('\033[93m' + notice + '\033[0m')
 
@@ -64,6 +64,7 @@ def app():
 			
 			for template in page_templates:
 				if template["*"] in modele_bandeau:
+					# save article name into file
 					logText("articles_civ.txt", page_title)
 					articles_count += 1
 					print(page_title + " has some issues.")
@@ -71,5 +72,6 @@ def app():
 	printNotice("In total, " + str(articles_count) + " articles have issues.")
 	if (articles_count > 0):
 		printNotice("Checkout the logs for more details.")
+
 # Triggering the application
 app()
