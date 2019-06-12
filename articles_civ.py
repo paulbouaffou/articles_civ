@@ -57,7 +57,6 @@ def app():
 			# Define which templates are considered problematic
 			modele_bandeau = [
 				"Modèle:Sources secondaires",
-				"Modèle:Ébauche",
 				"Modèle:Sources",
 				"Modèle:Méta bandeau d'avertissement",
 			]
